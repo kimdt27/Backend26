@@ -1,0 +1,45 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# PhpStorm / JetBrains
+.idea/
+*.iml
+*.iws
+
+# Composer
+/vendor/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# PHPUnit / coverage
+.phpunit.result.cache
+.phpunit.cache/
+coverage/
+
+# PHPStan / PHP-CS-Fixer
+.phpstan.cache
+.php-cs-fixer.cache
