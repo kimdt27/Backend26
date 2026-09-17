@@ -1,5 +1,5 @@
 <?php
-$user = "kim";
+$user = "kim2";
 $pass = "123456";
 function dbCon($user, $pass){
 try {

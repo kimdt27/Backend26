@@ -12,7 +12,7 @@ if (isset($_POST['submit'])){
         $_FILES['imgfile']['type']=="image/pjpeg" ||
         $_FILES['imgfile']['type']=="image/gif" ||
         $_FILES['imgfile']['type']=="image/jpg")&& (
-         $_FILES['imgfile']['size']< 3000000
+         $_FILES['imgfile']['size']< 30000000000000
         )){
         if ($_FILES['imgfile']['error']>0){
             echo "Error: ". $_FILES['imgfile']['error'];
@@ -30,14 +30,14 @@ if (isset($_POST['submit'])){
                 echo "Stored in: upload/" . $_FILES['imgfile']['name'] . "<br>";
 
                 try {
-                    $dsn = "mysql:host=localhost;dbname=imgup";
+                    $dsn = "mysql:host=localhost;dbname=img";
                     $username = "kim";
                     $password = "123456";
                     $conn = new PDO($dsn, $username, $password);
 
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                    $sql = "INSERT INTO img (filename) VALUES (:filename)";
+                    $sql = "INSERT INTO imgs (filename) VALUES (:filename)";
                     $stmt = $conn->prepare($sql);
 
                     $stmt->bindParam(':filename', $_FILES['imgfile']['name']);

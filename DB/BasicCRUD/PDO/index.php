@@ -14,7 +14,7 @@ $dbCon = dbCon($user, $pass);
 $query = $dbCon->prepare("SELECT * FROM customers");
 $query->execute();
 $getUsers = $query->fetchAll();
-//var_dump($getUsers);
+var_dump($getUsers);
 ?>
 <body>
 
