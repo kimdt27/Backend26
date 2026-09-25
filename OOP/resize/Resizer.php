@@ -48,16 +48,9 @@ class Resizer{
     }
 
     public function resize($width, $height){
-        $new_image = imagecreatetruecolor($width,$height);
+        $new_image = imagecreatetruecolor(round($width),round($height));
         imagecopyresampled($new_image, $this->image, 0,0,0,0,
-            $width, $height, $this->getWidth(), $this->getHeight());
+            round($width), round($height), $this->getWidth(), $this->getHeight());
         $this->image = $new_image;
     }
 }
-/*function doStuff($value){
-    $size = new Resizer();
-    $size->load("img.jpg");
-    $size->resizeToWidth($value);
-    $size->save("img/img.jpg");
-}
-doStuff(100);*/
